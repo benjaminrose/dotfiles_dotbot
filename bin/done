@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+#this uses terminal-notifier, https://github.com/julienXX/terminal-notifier
+#script written by Benjamin Rose
+#2017-03-13
+
+terminal-notifier -sound bell -message 'Code is done running!'

@@ -1,0 +1,36 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~', '~/.config', '~/.ssh']
+
+- link:
+    # destination: source
+    # default source is destination with leading '.' removed
+    ~/brewfile: brewfile
+    ~/.bash_profile:
+    #is this the correct way to do a folder?
+    ~/.config/bat:
+        create: true
+    ~/.condarc:
+    #this coppies the intire repo, puttin /bin/ in a fixed location
+    ~/.dotfiles: ''
+    ~/.gitconfig: 
+    ~/.gitignore_global:
+    #~/.matplotlib/matplotlibrc
+    #~/.ssh/config:
+        #create: true
+    #~/.tmux.conf or ~/.screenrc
+    #~/.vim: 
+    ~/.vimrc: 
+    # $HOME/Library/Application Support/Code/User/settings.json: vscode.json
+    ~/.zshrc: 
+
+- create:
+    - ~/.vim/undo-history
+    - ~/.ssh
+    #- ~/Backups
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  # do I want shell scripts to install apps via my brewfile or install miniconda? -- not on every sysetem

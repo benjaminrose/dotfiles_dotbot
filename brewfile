@@ -1,0 +1,73 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+cask_args appdir: "/Applications"
+
+
+# Terminal tweaks/apps
+
+brew "bat"
+brew "htop"
+brew "wget"
+# brew "fish"
+brew "pandoc"
+brew "terminal-notifier"
+brew "tree"
+brew "trash"
+brew "tmux"
+#brew "bash_git_prompt"
+#cask "anaconda"
+cask "miniconda"
+#brew "pyenv"
+brew "pipx"
+#brew "ffmpeg"   #This has nearly 1000 dependancies.
+#brew "youtube-dl"
+#cask makemkv
+
+
+
+# GUI tweeks
+
+#https://github.com/sindresorhus/quick-look-plugins
+#cask "qlstephen"   # Currently fails in Catalina
+#cask "qlmarkdown"  # Currently fails in Catalina
+
+
+# GUI Apps
+
+brew "mas"
+
+cask "iterm2"
+cask "sublime-text"
+cask "1Password" # Need this already
+cask "alfred"
+cask "skype"
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Keynote", id: 409183694
+mas "Slack", id: 803453959
+mas "Downlink", id: 1454269192
+mas "Amphetamine", id: 937984704
+mas "2Do", id: 477670270
+cask "notion"
+mas "Paprika Recipe Manager 3", id: 1303222628
+#mas "Notability", id: 736189492
+cask "zoomus"
+cask "visual-studio-code"
+cask "gitkraken"
+mas "Meeter for Zoom, Teams & Co", id: 1510445899
+
+
+# Fonts
+
+cask "font-open-dyslexic"
+cask "font-inconsolata-for-powerline"
+cask "font-inconsolata-for-powerline-bold"
+#GraramondNo8 maybe it is:
+cask "font-eb-garamond"
+#cask "font-charter"  # should be preinstalled on macOS
+
+
+# Large apps, so I can use the other stuff while this is installing
+mas "Xcode", id: 497799835

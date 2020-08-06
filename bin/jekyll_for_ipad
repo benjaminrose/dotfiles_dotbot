@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+jekyll serve --host 0.0.0.0
+#may need some sort of `bundle run` infront, if bundle is being used. 
+
+# https://zarino.co.uk/post/jekyll-local-network/
+# https://www.colemanm.org/post/writing-on-the-ipad/

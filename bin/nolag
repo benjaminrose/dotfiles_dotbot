@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+while true; do echo -n .; sleep 0.5; done
+
+# keeps mac wifi card awake and removes ssh terminal lag if the host mac is on wifi. 
+# from https://leancrew.com/all-this/2020/05/timing-in-ssh/

@@ -1,0 +1,2 @@
+#https://journals.aas.org/research-note-preparation-guidelines/
+alias wctex="texcount -v3 -merge -incbib -dir -sub=none -utf8 -sum"
