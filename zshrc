@@ -1,5 +1,5 @@
 #Personal stuff before default stuff.
-PROMPT='%n@%m:%~%# '
+PROMPT='%(?.%F{green}√.%F{red}?)%f %n@%m: %~%# '
 
 #And it looks like /usr/local/bin (homebrew) is first in the default $PATH.
 export PATH=$HOME/.local/bin:$PATH.   #for pipx
@@ -18,7 +18,7 @@ setopt NO_CASE_GLOB
 setopt AUTO_CD
 # CORRECT turns on spelling correction for commands, and the CORRECT_ALL option turns on spelling correction for all arguments.
 setopt CORRECT
-setopt CORECT_ALL
+setopt CORRECT_ALL
 
 
 # >>> conda initialize >>>
@@ -39,5 +39,39 @@ unset __conda_setup
 
 alias lsa='ls -aF'
 alias ls='ls -LGF' #I don't remember what L & G do, but F gets the trailing /'s
-alias conda-update='conda env update -f environment.yaml && conda env export > environment.yaml.lock`
-alias conda-new=`conda env create -f environment.yaml`
+alias conda-update='conda env update -f environment.yaml && conda env export > environment.yaml.lock'
+alias conda-new='conda env create -f environment.yaml'
+
+
+
+
+# Automatic iTerm2 profile switching
+function tabc() {
+  NAME=$1; if [ -z "$NAME" ]; then NAME="Hotkey Window"; fi # if you have trouble with this, change
+                                                      # "Default" to the name of your default theme
+  echo -e "\033]50;SetProfile=$NAME\a"
+}
+
+function colorssh() {
+  tabc SSH
+  ssh $*
+  tabc
+}
+function colorssh() {
+    if [[ -n "$ITERM_SESSION_ID" ]]; then
+        trap "tabc" INT EXIT
+        # needs to use "duke" or "midway" since it only sees what is typed at the termianl and does not read .ssh/config
+        if [[ "$*" =~ "duke" ]]; then
+            tabc Duke
+        elif [[ "$*" =~ "cosmo" ]]; then
+            tabc Duke 
+        elif [[ "$*" =~ "midway" ]]; then
+            tabc Midway 
+        else
+            tabc SSH
+        fi
+    fi
+    ssh $*
+}
+
+alias ssh="colorssh"
