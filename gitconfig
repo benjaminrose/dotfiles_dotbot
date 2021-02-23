@@ -8,3 +8,7 @@
 	gpgSign = false
 [tag]
 	forceSignAnnotated = false
+[core]
+	excludesfile = ~/.gitignore_global
+[init]
+	defaultBranch = ""

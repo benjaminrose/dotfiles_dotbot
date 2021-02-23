@@ -10,9 +10,10 @@
     ~/brewfile: brewfile
     ~/.bash_profile:
     #is this the correct way to do a folder?
-    ~/.config/bat:
-        create: true
+    #~/.config/bat:
+        #create: true
     ~/.condarc:
+    ~/.cookiecutterrc:
     #this coppies the intire repo, puttin /bin/ in a fixed location
     ~/.dotfiles: ''
     ~/.gitconfig: 
@@ -33,4 +34,6 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - git config --global core.excludesfile ~/.gitignore_global
+  - git config --global user.name "Benjamin Rose"
   # do I want shell scripts to install apps via my brewfile or install miniconda? -- not on every sysetem

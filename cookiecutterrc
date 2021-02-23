@@ -1,0 +1,5 @@
+default_context:
+    full_name: "Benjamin Rose"
+    email: "benjamin.rose@me.com"
+    github_user: "benjaminrose"
+cookiecutters_dir: "~/.cookiecutters/"

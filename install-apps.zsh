@@ -21,7 +21,16 @@ brew bundle --file ~/brewfile
 
 # Install pipx appliations
 pipx install black
+pipx install cookiecutter
+pipx install darker
+pipx install flake8
+pipx install jupyter-book
+pipx install poetry
+pipx install pre-commit
+pipx install pycodestyle
+pipx install pygments
 pipx install pytest
+pipx install sphinx
 
 
 # Install cloud storage files

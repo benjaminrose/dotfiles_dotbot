@@ -53,9 +53,10 @@ mas "2Do", id: 477670270
 cask "notion"
 mas "Paprika Recipe Manager 3", id: 1303222628
 #mas "Notability", id: 736189492
-cask "zoomus"
+cask "zoom"
 cask "visual-studio-code"
 cask "gitkraken"
+cask "zotero"
 mas "Meeter for Zoom, Teams & Co", id: 1510445899
 
 
