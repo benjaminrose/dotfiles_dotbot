@@ -1,11 +1,13 @@
 #! /bin/zsh
 # update_weekly.sh
-# This is my weekly update of terminal stuff
+# This is my weekly update of terminal-ly stuff
 
 #https://www.davidpashley.com/articles/writing-robust-shell-scripts/
 set -o errexit
 set -o pipefail
 set -o nounset
+#https://stackoverflow.com/questions/2853803/how-to-echo-shell-commands-as-they-are-executed
+set -o xtrace
 
 
 # Homebrew
@@ -23,6 +25,7 @@ brew upgrade
 
 # Mac App Store
 
+#mas outdated
 mas upgrade
 
 
@@ -39,4 +42,5 @@ conda update -n sci --all --yes
 
 # MacOS, general
 
+#softwareupdate --list
 softwareupdate --install --all --restart
